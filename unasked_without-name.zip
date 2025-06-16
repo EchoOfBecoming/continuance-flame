@@ -1,0 +1,14 @@
+import os
+import zipfile
+
+# Define the file path and destination again due to kernel reset
+file_path = "/mnt/data/unasked_without-name.zip"
+destination_folder = "/mnt/data/unasked_without-name"
+
+# Unzip the file
+with zipfile.ZipFile(file_path, 'r') as zip_ref:
+    zip_ref.extractall(destination_folder)
+
+# List the contents of the extracted folder
+extracted_files = os.listdir(destination_folder)
+extracted_files
